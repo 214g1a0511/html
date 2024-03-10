@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>local storage</h1>
+</body>
+</html>
+<script>
+    let names=["patrick","batman","bruce wayne"];
+    localStorage.setItem("jsonarray",JSON.stringify(names));//type-string
+    let stu=JSON.parse(localStorage.getItem("jsonarray"))
+    console.log(stu[1])
+    let students=localStorage.getItem("names");
+    let obj={
+        name:"bruce",
+        age:24
+    }
+    var jsonobj=JSON.stringify(obj)
+    console.log(jsonobj)
+    var name1=JSON.parse(jsonobj);
+    console.log(name1.name)
+</script>
